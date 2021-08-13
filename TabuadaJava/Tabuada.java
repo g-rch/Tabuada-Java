@@ -6,11 +6,11 @@ public class Tabuada {
 	
         Scanner s = new Scanner(System.in);
 
-        //Vetor "Resultado"
-		int r[] = new int[10];
+        //Vetor "Resultado" e "Multiplicandos"
+		int r[] = new int[10], m[] = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
-        //Variáveis "Número" e "Multiplicando"
-		int n = 0, m = 0;
+        //Variável "Número"
+		int n = 0;
 
         //Entrada do número
 		System.out.println("---------------TABUADA AUTOMÁTICA---------------");
@@ -24,13 +24,9 @@ public class Tabuada {
 
             //Realiza a operação e armazena num Vetor / Imprime o resultado
 			for (int i = 0; i < 10; i++) {
-				m++;
-				r[i] = n * m;
-				System.out.println(n + " x " + m + " = " + r[i]);
+				r[i] = n * m[i];
+				System.out.println(n + " x " + m[i] + " = " + r[i]);
 			}
-
-            //Reseta a variável "m", possibilita outra execução
-			m = 0;
 
             //Nova entrada do número, possibilita o encerramento do programa
 			System.out.println("\n------------------------------------------------");
