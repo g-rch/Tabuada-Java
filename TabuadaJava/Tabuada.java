@@ -1,24 +1,34 @@
+package test;
+
 import java.util.Scanner;
 
 public class Tabuada {
-
-	public static void main(String[] args) {
+        
+	static Scanner s = new Scanner(System.in);
+	// Vetor de inteiros coontendo números de 1 até 10
+	static int m[] = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	
-        Scanner s = new Scanner(System.in);
-
-        //Vetor "Resultado" e "Multiplicandos"
-		int r[] = new int[10], m[] = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-
-        //Variável "Número"
+	public static void main(String[] args) {
+		// Variável "Número"
 		int n = 0;
 
         //Entrada do número
-		System.out.println("---------------TABUADA AUTOMÁTICA---------------");
+		System.out.println("--- Tabuada Automática ---");
 		System.out.print("\nDigite um número: ");
 		n = s.nextInt();
-		System.out.println("\n------------------------------------------------");
+		
 
-        //Laço de repetição do código
+		multiplicacao(n);
+
+        //Fechamento do programa
+		System.out.println("\nFim do Programa");
+	}
+
+	public static void multiplicacao(int n) {
+		//Vetor "Resultado"
+		int r[] = new int[10];
+		
+		//Laço de repetição do código
 		while (n != 0) {
 			System.out.println("\nTabuada do " + n + ":\n");
 
@@ -29,15 +39,9 @@ public class Tabuada {
 			}
 
             //Nova entrada do número, possibilita o encerramento do programa
-			System.out.println("\n------------------------------------------------");
 			System.out.println("\n(Digite 0 para finalizar o programa)");
 			System.out.print("\nDigite um número: ");
 			n = s.nextInt();
-			System.out.println("\n------------------------------------------------");
 		}
-
-        //Fechamento do programa
-		System.out.println("\nFim do Programa");
-        s.close();
 	}
 }
